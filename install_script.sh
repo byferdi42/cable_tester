@@ -19,4 +19,7 @@ curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main
 
 curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/install_script_2.sh -o "install_script2.sh"
 
-echo "internetli kurulum işlemleri tamamlandı, şimdi cihazın internetini kesin ve ethernet kablosunu 1. ve 2. ethernet çıkışlarına takın sonrasında\nchmod +x install_script2.sh\n./install_script2.sh\n komutlarını çalıştırın."
+echo "internetli kurulum işlemleri tamamlandı, şimdi cihazın internetini kesin ve ethernet kablosunu 1. ve 2. ethernet çıkışlarına takın sonrasında"
+echo "chmod +x install_script2.sh"
+echo "./install_script2.sh"
+echo "komutlarını çalıştırın."
