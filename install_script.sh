@@ -11,11 +11,20 @@ echo "Paket listesi güncelleniyor..."
 sudo apt update -y
 
 # Netplan.io paketini kur
-echo "Netplan.io kuruluyor..."
 sudo apt install netplan.io -y
+
+curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/01-netcfg.yaml -o "/etc/netplan/01-netcfg.yaml"
 
 # systemd-networkd servisini yeniden başlat
 echo "Systemd-networkd servisi yeniden başlatılıyor..."
 sudo systemctl restart systemd-networkd
+
+sudo netplan apply
+
+curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/test_server -o "test_server"
+
+chmod +x test_server
+
+./test_server
 
 echo "İşlemler başarıyla tamamlandı."
