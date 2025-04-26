@@ -15,13 +15,13 @@ sudo apt install netplan.io -y
 
 curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/01-netcfg.yaml -o "/etc/netplan/01-netcfg.yaml"
 
+curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/test_server -o "test_server"
+
 # systemd-networkd servisini yeniden başlat
 echo "Systemd-networkd servisi yeniden başlatılıyor..."
 sudo systemctl restart systemd-networkd
 
 sudo netplan apply
-
-curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/test_server -o "test_server"
 
 chmod +x test_server
 
