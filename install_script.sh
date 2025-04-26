@@ -17,14 +17,6 @@ curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main
 
 curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/test_server -o "test_server"
 
-# systemd-networkd servisini yeniden başlat
-echo "Systemd-networkd servisi yeniden başlatılıyor..."
-sudo systemctl restart systemd-networkd
+curl -L https://raw.githubusercontent.com/byferdi42/cable_tester/refs/heads/main/install_script_2.sh -o "install_script2.sh"
 
-sudo netplan apply
-
-chmod +x test_server
-
-./test_server
-
-echo "İşlemler başarıyla tamamlandı."
+echo "internetli kurulum işlemleri tamamlandı, şimdi cihazın internetini kesin ve ethernet kablosunu 1. ve 2. ethernet çıkışlarına takın sonrasında\nchmod +x install_script2.sh\n./install_script2.sh\n komutlarını çalıştırın."
